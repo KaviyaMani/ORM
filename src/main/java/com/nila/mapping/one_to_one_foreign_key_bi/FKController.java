@@ -40,7 +40,7 @@ public class FKController {
 
     @GetMapping("/users/name/{name}")
     public Optional<User> getUserByName(@PathVariable String name) {
-        return userRepository.findByUsername(name);
+        return userRepository.findByuname(name);
     }
 
     @DeleteMapping("/users/{id}")
