@@ -12,8 +12,8 @@ Need for Transaction Management:
     when annotated with @Transactional, particular method should be execute within the context of transaction. 
     Spring **creates proxies** for all the classes annotated with @Transactional, So transactional logic can be applied before or after easily
     Add @EnableTransactionManagement  to main class, without this @transactional won't work
-    If we have 2 operations save user, save address with @Transational on method level if save address failed save user won't be committed to db
-    without the annotation user will be saved but address won't be saved.
+    If we have 2 operations save userDTO, save address with @Transational on method level if save address failed save userDTO won't be committed to db
+    without the annotation userDTO will be saved but address won't be saved.
     can be applied to interfaces, classes, or directly on methods, precedence interface< superclass < class < interface method < superclass method < and class method.
 ### Limitations
     class level - applied to all public methods, private or protected methods **will be ignored** without error
@@ -98,4 +98,4 @@ Final note:
     Since all this **applied only when new transaction is created** not with existing
 
 
-
+https://codingnomads.com/spring-data-jpa-repository-common-issues
